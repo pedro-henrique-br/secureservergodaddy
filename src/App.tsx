@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import logo from "./../public/logo_sabedoria2.jpg";
 
 export default function App() {
-  const [fromGophish, setFromGophish] = useState(false);
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("src") === "gophish") {
-      setFromGophish(true);
-    }
-  }, []);
+ 
 
   return (
     <div className="min-h-screen bg-[#ada333] flex items-center justify-center">
@@ -68,17 +62,14 @@ export default function App() {
 
         {/* Mensagem tranquilizadora */}
         <div className="border-t pt-6 text-sm text-gray-600 text-center max-w-xl mx-auto">
-          {fromGophish ? (
             <p>
               Esta simulação <strong>não coletou senhas, dados pessoais ou
               informações sensíveis</strong>. Nenhuma ação adicional é
               necessária por parte do usuário.
             </p>
-          ) : (
             <p>
               Em caso de dúvidas, entre em contato com o time de TI: <span className="font-semibold">{"ti@gruposabedoria.com.br"}</span>.
             </p>
-          )}
         </div>
 
       </div>

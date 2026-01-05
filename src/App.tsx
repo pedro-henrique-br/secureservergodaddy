@@ -3,18 +3,13 @@ import { useEffect, useState } from "react";
 import logo from "./../public/logo_sabedoria2.jpg";
 
 export default function App() {
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const rid = params.get("rid");
 
     console.log("RID:", rid);
-
-    setReady(true);
   }, []);
-
-  if (!ready) return null;
 
   return (
     <div className="min-h-screen bg-[#ada333] flex items-center justify-center">

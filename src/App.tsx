@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import logo from "./../public/logo_sabedoria2.jpg";
 
 export default function App() {

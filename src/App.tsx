@@ -1,13 +1,24 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import logo from "./../public/logo_sabedoria2.jpg";
 
 export default function App() {
+  const [ready, setReady] = useState(false);
 
- 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const rid = params.get("rid");
+
+    console.log("RID:", rid);
+
+    setReady(true);
+  }, []);
+
+  if (!ready) return null;
 
   return (
     <div className="min-h-screen bg-[#ada333] flex items-center justify-center">
-      
+
       <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg px-16 py-12 text-gray-800">
 
         {/* Logo */}
@@ -62,14 +73,14 @@ export default function App() {
 
         {/* Mensagem tranquilizadora */}
         <div className="border-t pt-6 text-sm text-gray-600 text-center max-w-xl mx-auto">
-            <p>
-              Esta simulação <strong>não coletou senhas, dados pessoais ou
+          <p>
+            Esta simulação <strong>não coletou senhas, dados pessoais ou
               informações sensíveis</strong>. Nenhuma ação adicional é
-              necessária por parte do usuário.
-            </p>
-            <p>
-              Em caso de dúvidas, entre em contato com o time de TI: <span className="font-semibold">{"ti@gruposabedoria.com.br"}</span>.
-            </p>
+            necessária por parte do usuário.
+          </p>
+          <p>
+            Em caso de dúvidas, entre em contato com o time de TI: <span className="font-semibold">{"ti@gruposabedoria.com.br"}</span>.
+          </p>
         </div>
 
       </div>

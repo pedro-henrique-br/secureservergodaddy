@@ -11,7 +11,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   font-weight: 400;
 
   color: #1f2937; /* gray-800 */
@@ -40,6 +39,7 @@ p {
 }
 
 span {
+  font-style: italic;
   font-weight: 700;
 }
 

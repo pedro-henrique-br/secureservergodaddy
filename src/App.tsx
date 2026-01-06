@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import logo from "./../public/logo_sabedoria2.jpg";
+import './App.css'
 
 export default function App() {
 
@@ -11,12 +12,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#ada333] flex items-center justify-center">
+    <div className="max-h-full bg-[#ada333] flex items-center justify-center">
 
-      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg px-16 py-12 text-gray-800">
+      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg text-gray-800">
 
-        {/* Logo */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-2">
           <img
             src={logo}
             alt="Logo da Empresa"
@@ -24,18 +24,16 @@ export default function App() {
           />
         </div>
 
-        {/* Título */}
-        <h1 className="text-2xl font-semibold mb-8 text-center">
+        <h1 className="text-2xl font-semibold mb-2 text-center">
           Aviso de Conscientização em Segurança da Informação
         </h1>
 
-        {/* Introdução centralizada */}
         <div className="max-w-xl mx-auto text-center mb-10">
           <p className="mb-4">
             Esta página faz parte de uma{" "}
             <strong>campanha interna de conscientização</strong> sobre segurança
             da informação, com foco na prevenção de golpes digitais e tentativas
-            de phishing.
+            de Phishing <span className="italic">{"(é um tipo de golpe na internet em que pessoas mal-intencionadas se passam por empresas, colegas ou sistemas conhecidos para enganar principalmente pessoas desinformadas ou desatentas, levando-as a clicar em links, abrir arquivos ou informar senhas e dados pessoais"}</span>.
           </p>
 
           <p>
@@ -45,7 +43,6 @@ export default function App() {
           </p>
         </div>
 
-        {/* Conteúdo informativo */}
         <div className="max-w-xl mx-auto mb-10">
           <p className="mb-4 text-center">
             Em situações reais, esse tipo de ação pode resultar no
@@ -65,7 +62,6 @@ export default function App() {
           </ul>
         </div>
 
-        {/* Mensagem tranquilizadora */}
         <div className="border-t pt-6 text-sm text-gray-600 text-center max-w-xl mx-auto">
           <p>
             Esta simulação <strong>não coletou senhas, dados pessoais ou
